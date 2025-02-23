@@ -10,7 +10,7 @@ export default function Hero() {
       }}
     >
       <div className="hero-content flex-col">
-        <h2 className="text-5xl">
+        <h2 className="text-5xl card-title">
           Beautiful boxes for life&apos;s precious moments
         </h2>
         <Link to="/shoppingpage">
