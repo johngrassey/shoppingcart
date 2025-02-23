@@ -1,14 +1,13 @@
 import "./App.css";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/NavBar/Navbar";
-import Hero from "./components/Hero/Hero";
+import MainPage from "./components/MainPage/MainPage";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Link to="/shoppingpage">Shopping Page</Link>
+      <MainPage />
       <Outlet />
     </>
   );
