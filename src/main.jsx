@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page.jsx";
 import ShoppingPage from "./components/ShoppingPage/ShoppingPage";
+import MainPage from "./components/MainPage/MainPage";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      { index: true, element: <MainPage /> },
       {
         path: "/shoppingpage",
         element: <ShoppingPage />,
