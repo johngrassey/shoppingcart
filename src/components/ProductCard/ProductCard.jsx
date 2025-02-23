@@ -13,6 +13,15 @@ export default function ProductCard({ product }) {
         <p>${price}</p>
         <p>{description}</p>
         <div className="card-actions">
+          <div className="flex justify-between gap-2">
+            <Button name="-" />
+            <input
+              type="text"
+              placeholder="0"
+              className="input text-center text-lg"
+            />
+            <Button name="+" />
+          </div>
           <Button name="Add to Cart" />
         </div>
       </div>
