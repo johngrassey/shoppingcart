@@ -3,13 +3,20 @@ import Button from "../Button/Button";
 
 export default function Hero() {
   return (
-    <div className="p-40 flex flex-col items-center justify-center text-3xl">
-      <h2 className="p-4 text-5xl">
-        Beautiful boxes for life&apos;s precious moments
-      </h2>
-      <Link to="/shoppingpage">
-        <Button name="Shop Now" />
-      </Link>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url('src/assets/diagonal_far.JPG')`,
+      }}
+    >
+      <div className="hero-content flex-col">
+        <h2 className="text-5xl">
+          Beautiful boxes for life&apos;s precious moments
+        </h2>
+        <Link to="/shoppingpage">
+          <Button name="Shop Now" />
+        </Link>
+      </div>
     </div>
   );
 }
