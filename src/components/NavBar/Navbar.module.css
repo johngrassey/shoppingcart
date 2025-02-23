@@ -1,0 +1,9 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 30px;
+}
+
+h1 {
+  font-size: 3rem;
+}
