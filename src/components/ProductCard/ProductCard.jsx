@@ -1,4 +1,3 @@
-import Button from "../Button/Button";
 import { PropTypes } from "prop-types";
 
 export default function ProductCard({ product }) {
@@ -14,15 +13,17 @@ export default function ProductCard({ product }) {
         <p>{description}</p>
         <div className="card-actions">
           <div className="flex justify-between gap-2">
-            <Button name="-" />
+            <button className="btn btn-secondary text-white text-2xl">-</button>
             <input
               type="text"
               placeholder="0"
               className="input text-center text-lg"
             />
-            <Button name="+" />
+            <button className="btn btn-secondary text-white text-2xl">+</button>
           </div>
-          <Button name="Add to Cart" />
+          <button className="btn btn-primary btn-block text-xl">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

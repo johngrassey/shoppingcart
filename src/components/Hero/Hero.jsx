@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
 
 export default function Hero() {
   return (
@@ -14,7 +13,7 @@ export default function Hero() {
           Beautiful boxes for life&apos;s precious moments
         </h2>
         <Link to="/shoppingpage">
-          <Button name="Shop Now" />
+          <button className="btn btn-primary btn-xl">Shop Now</button>
         </Link>
       </div>
     </div>
