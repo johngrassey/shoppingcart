@@ -11,27 +11,30 @@ function App() {
   const [products, setProducts] = useState([
     {
       id: 1,
-      name: "Box 1",
+      name: "The Ice Box",
       price: 100,
-      description: "This is a beautiful box that your loved one will enjoy.",
+      description:
+        "Basswood box with a blue milk paint exterior and white/gray fabric bottom. The lid is made from quartersawn ash.",
       image: "src/assets/box1.JPG",
       quantity: 1,
       inCart: false,
     },
     {
       id: 2,
-      name: "Box 2",
+      name: "The Blues Box",
       price: 125,
-      description: "This is a beautiful box that your loved one will enjoy.",
+      description:
+        "Basswood box made with a blue milk paint exterior and golden yellow fabric bottom. The lid is made from spalted hackberry.",
       image: "src/assets/box2.JPG",
       quantity: 1,
       inCart: false,
     },
     {
       id: 3,
-      name: "Box 3",
+      name: "Red Summer Box",
       price: 85,
-      description: "This is a beautiful box that your loved one will enjoy.",
+      description:
+        "Basswood box made with burgundy milk paint exterior and a red patterned fabric bottom. The lid is made from solid ash.",
       image: "src/assets/box3.JPG",
       quantity: 1,
       inCart: false,

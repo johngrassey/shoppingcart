@@ -17,9 +17,11 @@ export default function ProductCard({ product }) {
         <img src={image} alt={name} />
       </figure>
       <div className="card-body">
-        <h3 className="card-title">{name}</h3>
-        <p>${price}</p>
-        <p>{description}</p>
+        <div className="flex w-full justify-between items-baseline">
+          <h3 className="card-title">{name}</h3>
+          <div className="text-lg font-bold">${price}</div>
+        </div>
+        <p className="mb-2">{description}</p>
         <div className="card-actions">
           <div className="flex justify-between gap-2">
             <button
