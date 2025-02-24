@@ -1,7 +1,12 @@
 import { PropTypes } from "prop-types";
+import CartContext from "../../contexts/CartContext";
+import { useContext } from "react";
 
 export default function ProductCard({ product }) {
-  const { name, price, image, description } = product;
+  const { name, price, image, description, quantity, id } = product;
+  const { incrementProductQuantity, decrementProductQuantity, addToCart } =
+    useContext(CartContext);
+
   return (
     <div className="card shadow-md w-96">
       <figure>
@@ -13,15 +18,28 @@ export default function ProductCard({ product }) {
         <p>{description}</p>
         <div className="card-actions">
           <div className="flex justify-between gap-2">
-            <button className="btn btn-secondary text-white text-2xl">-</button>
+            <button
+              className="btn btn-secondary text-white text-2xl"
+              onClick={() => decrementProductQuantity(id)}
+            >
+              -
+            </button>
             <input
               type="text"
-              placeholder="0"
+              placeholder={quantity}
               className="input text-center text-lg"
             />
-            <button className="btn btn-secondary text-white text-2xl">+</button>
+            <button
+              className="btn btn-secondary text-white text-2xl"
+              onClick={() => incrementProductQuantity(id)}
+            >
+              +
+            </button>
           </div>
-          <button className="btn btn-primary btn-block text-xl">
+          <button
+            className="btn btn-primary btn-block text-xl"
+            onClick={() => addToCart(product)}
+          >
             Add to Cart
           </button>
         </div>
@@ -37,5 +55,6 @@ ProductCard.propTypes = {
     image: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
+    quantity: PropTypes.number.isRequired,
   }).isRequired,
 };
