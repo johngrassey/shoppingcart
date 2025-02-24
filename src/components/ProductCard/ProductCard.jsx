@@ -3,9 +3,13 @@ import CartContext from "../../contexts/CartContext";
 import { useContext } from "react";
 
 export default function ProductCard({ product }) {
-  const { name, price, image, description, quantity, id } = product;
-  const { incrementProductQuantity, decrementProductQuantity, addToCart } =
-    useContext(CartContext);
+  const { name, price, image, description, quantity, id, inCart } = product;
+  const {
+    incrementProductQuantity,
+    decrementProductQuantity,
+    addToCart,
+    removeFromCart,
+  } = useContext(CartContext);
 
   return (
     <div className="card shadow-md w-96">
@@ -36,12 +40,21 @@ export default function ProductCard({ product }) {
               +
             </button>
           </div>
-          <button
-            className="btn btn-primary btn-block text-xl"
-            onClick={() => addToCart(product)}
-          >
-            Add to Cart
-          </button>
+          {!inCart ? (
+            <button
+              className="btn btn-primary btn-block text-xl"
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </button>
+          ) : (
+            <button
+              className="btn btn-primary btn-block text-xl"
+              onClick={() => removeFromCart(product)}
+            >
+              Clear from Cart
+            </button>
+          )}
         </div>
       </div>
     </div>
@@ -56,5 +69,6 @@ ProductCard.propTypes = {
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
     quantity: PropTypes.number.isRequired,
+    inCart: PropTypes.bool.isRequired,
   }).isRequired,
 };

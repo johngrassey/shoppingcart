@@ -16,6 +16,7 @@ function App() {
       description: "This is a beautiful box that your loved one will enjoy.",
       image: "src/assets/box1.JPG",
       quantity: 1,
+      inCart: false,
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ function App() {
       description: "This is a beautiful box that your loved one will enjoy.",
       image: "src/assets/box2.JPG",
       quantity: 1,
+      inCart: false,
     },
     {
       id: 3,
@@ -32,11 +34,27 @@ function App() {
       description: "This is a beautiful box that your loved one will enjoy.",
       image: "src/assets/box3.JPG",
       quantity: 1,
+      inCart: false,
     },
   ]);
 
   const addToCart = (product) => {
+    setProducts(
+      products.map((prod) =>
+        prod.id === product.id ? { ...prod, inCart: true } : prod
+      )
+    );
     setCart([...cart, product]);
+  };
+
+  const removeFromCart = (product) => {
+    const { id } = product;
+    setProducts(
+      products.map((prod) =>
+        prod.id === id ? { ...prod, inCart: false } : prod
+      )
+    );
+    setCart(cart.filter((product) => product.id !== id));
   };
 
   const incrementProductQuantity = (id) => {
@@ -66,6 +84,7 @@ function App() {
         cart,
         products,
         addToCart,
+        removeFromCart,
         incrementProductQuantity,
         decrementProductQuantity,
       }}
