@@ -13,7 +13,7 @@ export default function Navbar({ quantity }) {
       <div className="navbar-end">
         <div className="indicator">
           {quantity > 0 ? (
-            <span className="indicator-item badge badge-secondary">
+            <span className="indicator-item badge badge-secondary text-white">
               {quantity}
             </span>
           ) : null}
