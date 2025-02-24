@@ -17,7 +17,9 @@ export default function Navbar({ quantity }) {
               {quantity}
             </span>
           ) : null}
-          <ShoppingCart size={36} />
+          <Link to="/checkout">
+            <ShoppingCart size={36} />
+          </Link>
         </div>
       </div>
     </header>
