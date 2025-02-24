@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types";
 
 export default function Navbar({ quantity }) {
   return (
-    <header className="navbar p-5">
+    <header className="navbar p-10">
       <div className="navbar-start">
         <Link to="/">
           <h1 className="text-5xl">BOXWORTHY</h1>
