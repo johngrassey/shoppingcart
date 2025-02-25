@@ -6,7 +6,7 @@ export default function CheckoutCard({ product }) {
   return (
     <div className="flex justify-between py-5 gap-5 w-full">
       <div className="flex justify-between gap-5">
-        <figure className="max-w-3xs">
+        <figure className="max-w-3xs hidden sm:block">
           <img src={image} alt={name} className="rounded-lg" />
         </figure>
         <div className="py-5">

@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div
-      className="hero min-h-screen"
+      className="hero min-h-screen absolute top-0 left-0 z-10"
       style={{
         backgroundImage: `url('src/assets/diagonal_far.JPG')`,
       }}
     >
-      <div className="hero-content flex-col">
-        <h2 className="text-5xl card-title text-white">
-          Beautiful boxes for life&apos;s precious moments
+      <div className="hero-content flex-col items-start absolute bottom-0 left-0 p-10">
+        <h2 className="text-6xl card-title text-primary">
+          Beautiful boxes for
+          <br />
+          life&apos;s precious moments
         </h2>
         <Link to="/shoppingpage">
-          <button className="btn btn-primary btn-xl">Shop Now</button>
+          <button className="btn btn-accent btn-xl text-white">Shop Now</button>
         </Link>
       </div>
     </div>
