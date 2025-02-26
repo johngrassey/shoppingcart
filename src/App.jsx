@@ -15,7 +15,7 @@ function App() {
       price: 100,
       description:
         "Basswood box with a blue milk paint exterior and white/gray fabric bottom. The lid is made from quartersawn ash.",
-      image: "src/assets/box1.JPG",
+      image: "/box1.jpg",
       quantity: 1,
       inCart: false,
     },
@@ -25,7 +25,7 @@ function App() {
       price: 125,
       description:
         "Basswood box made with a blue milk paint exterior and golden yellow fabric bottom. The lid is made from spalted hackberry.",
-      image: "src/assets/box2.JPG",
+      image: "/box2.JPG",
       quantity: 1,
       inCart: false,
     },
@@ -35,7 +35,7 @@ function App() {
       price: 85,
       description:
         "Basswood box made with burgundy milk paint exterior and a red patterned fabric bottom. The lid is made from solid ash.",
-      image: "src/assets/box3.JPG",
+      image: "/box3.JPG",
       quantity: 1,
       inCart: false,
     },
