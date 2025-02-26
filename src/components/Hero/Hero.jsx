@@ -5,7 +5,7 @@ export default function Hero() {
     <div
       className="hero min-h-screen absolute top-0 left-0 z-10"
       style={{
-        backgroundImage: `url('src/assets/diagonal_far.JPG')`,
+        backgroundImage: `url('/diagonal_far.JPG')`,
       }}
     >
       <div className="hero-content flex-col items-start absolute bottom-0 left-0 p-10">
